@@ -37,7 +37,7 @@ Logger* __stdcall Logger::toString(const WCHAR * str, ...)
 		file = stdout;
 
 	WaitForSingleObject(lock, INFINITE);
-	println("%s\n", str);
+	println(str);
 	ReleaseMutex(lock);
 	return this;
 }
@@ -46,6 +46,7 @@ Logger::~Logger()
 {
 	free(this);
 }
+
 
 void Logger::println(const char * str, ...)
 {

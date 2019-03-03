@@ -6,7 +6,8 @@ using namespace std;
 
 int main()
 {
-	auto msg = "Hello World!\n";
+	wchar_t msg[1024];
+	std::wcsncpy(msg, L"Hello World! \n", 1024);
 
 	auto fileName = "foo.txt";
 	auto attr = "w";
@@ -18,6 +19,6 @@ int main()
 		->toString("method")
 		->toString("pattern")
 		->toString("---")
-		->toString("fluent interface");
-
+		->toString("fluent interface")
+		->~Logger();
 }

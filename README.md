@@ -36,3 +36,6 @@ int main()
 		->~Logger();
 }
 ```
+
+### RESULT
+![](https://raw.githubusercontent.com/vicboma1/Logger/master/assets/foo.gif)

@@ -4,7 +4,8 @@
 ```C
   Logger();
   Logger(char const* fileName, char const* mode);
-  Logger* __stdcall toPrintFileMethod(const object obj);
+  Logger* __stdcall toPrintFileMethod(const object * obj);
+  Logger* __stdcall toPrintFileMethod();
   Logger* __stdcall toPrintFile(std::string &str);
   Logger* __stdcall toPrintFile(std::string &str);
   Logger* __stdcall toPrintFile(const char *str, ...);
